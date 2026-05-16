@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2 歲小孩香港迪士尼 1.5 日互動遊園攻略</title>
+  <style>
+    :root {
+      --slate-950: #020617;
+      --slate-900: #0f172a;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --sky-700: #0369a1;
+      --sky-100: #e0f2fe;
+      --sky-50: #f0f9ff;
+      --violet-700: #6d28d9;
+      --violet-100: #ede9fe;
+      --violet-50: #f5f3ff;
+      --emerald-700: #047857;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+      --amber-900: #78350f;
+      --amber-700: #b45309;
+      --amber-100: #fef3c7;
+      --amber-50: #fffbeb;
+      --rose-700: #be123c;
+      --rose-50: #fff1f2;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    [hidden] { display: none !important; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      color: var(--slate-900);
+      background: linear-gradient(180deg, var(--sky-50), #fff 38%, var(--violet-50));
+    }
+
+    button { font: inherit; }
+
+    a {
+      color: var(--sky-700);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .page { min-height: 100vh; }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 0 36px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(125, 211, 252, 0.42), transparent 34%),
+        radial-gradient(circle at 82% 0%, rgba(196, 181, 253, 0.38), transparent 36%);
+      pointer-events: none;
+    }
+
+    .chips,
+    .mini-tags,
+    .inline-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .chips { margin-bottom: 22px; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--slate-200);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--slate-100);
+      color: var(--slate-700);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .chip.blue { border-color: #bae6fd; background: var(--sky-50); color: var(--sky-700); }
+    .chip.purple { border-color: #ddd6fe; background: var(--violet-50); color: var(--violet-700); }
+    .chip.green { border-color: #a7f3d0; background: var(--emerald-50); color: var(--emerald-700); }
+    .chip.amber { border-color: #fde68a; background: var(--amber-50); color: var(--amber-700); }
+    .chip.rose { border-color: #fecdd3; background: var(--rose-50); color: var(--rose-700); }
+
+    h1 {
+      margin: 0;
+      max-width: 860px;
+      color: var(--slate-950);
+      font-size: clamp(38px, 7vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    h1 span { display: block; color: var(--sky-700); }
+
+    .lead {
+      max-width: 760px;
+      margin: 20px 0 0;
+      color: var(--slate-600);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .dining-tip,
+    .must-grid,
+    .list-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .dining-tip { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px; }
+    .must-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+    .list-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+    .card {
+      border: 1px solid var(--slate-200);
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 22px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+    }
+
+    .card-inner { padding: 20px; }
+
+    .summary-label {
+      margin: 0 0 6px;
+      color: var(--slate-500);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .summary-value {
+      margin: 0;
+      color: var(--slate-950);
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    main { padding: 32px 0 72px; }
+
+    section { margin-bottom: 52px; }
+
+    .section-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--sky-700);
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--slate-950);
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+    }
+
+    .section-desc {
+      max-width: 780px;
+      margin: 10px 0 22px;
+      color: var(--slate-600);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .icon.sky { background: var(--sky-50); color: var(--sky-700); }
+    .icon.violet { background: var(--violet-50); color: var(--violet-700); }
+    .icon.amber { background: var(--amber-50); color: var(--amber-700); }
+    .icon.slate { background: var(--slate-100); color: var(--slate-700); }
+
+    .card h3,
+    .attraction-card h3,
+    .timeline-title-row h3 {
+      margin: 0;
+      color: var(--slate-950);
+      line-height: 1.4;
+    }
+
+    .card h3 { font-size: 17px; }
+    .timeline-title-row h3 { font-size: 18px; }
+
+    .card p,
+    .attraction-card p,
+    .timeline-card p {
+      margin: 9px 0 0;
+      color: var(--slate-600);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .timeline-map {
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+      border: 1px solid var(--slate-200);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+      margin: 0 0 18px;
+    }
+
+    .tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 18px;
+      background: var(--slate-100);
+      margin-bottom: 18px;
+    }
+
+    .tab {
+      border: 0;
+      border-radius: 14px;
+      padding: 11px 15px;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--slate-700);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .tab:focus,
+    .note-toggle:focus,
+    .checklist button:focus {
+      outline: 2px solid #38bdf8;
+      outline-offset: 2px;
+    }
+
+    .tab.active {
+      background: var(--slate-950);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+    }
+
+    .timeline { display: grid; gap: 12px; }
+
+    .timeline-card,
+    .attraction-card {
+      border: 1px solid var(--slate-200);
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    .timeline-card {
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+    }
+
+    .timeline-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--sky-50);
+      color: var(--sky-700);
+      font-size: 21px;
+    }
+
+    .timeline.violet .timeline-icon { background: var(--violet-50); color: var(--violet-700); }
+
+    .timeline-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mini-tags { margin-top: 12px; }
+
+    .attraction-card {
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 13px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .attraction-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .meta {
+      color: var(--slate-500);
+      font-size: 12px;
+      font-weight: 900;
+      margin-top: 5px;
+    }
+
+    .note-box {
+      border: 1px solid #fde68a;
+      border-radius: 22px;
+      background: rgba(255, 251, 235, 0.88);
+      margin-top: 14px;
+      padding: 17px;
+    }
+
+    .note-toggle {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      color: var(--amber-900);
+      font-weight: 900;
+      text-align: left;
+      padding: 0;
+    }
+
+    .note-content {
+      display: none;
+      margin-top: 12px;
+      color: rgba(120, 53, 15, 0.92);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .note-box.open .note-content { display: block; }
+    .note-box.open .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.18s ease; }
+
+    .tip-blue { background: var(--sky-50); border-color: #bae6fd; }
+    .tip-violet { background: var(--violet-50); border-color: #ddd6fe; }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--slate-700);
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .check {
+      color: var(--emerald-700);
+      font-weight: 900;
+    }
+
+    .check.sky { color: var(--sky-700); }
+
+    .checklist {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .checklist button {
+      width: 100%;
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--slate-700);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .checklist button.done {
+      border-color: #a7f3d0;
+      background: var(--emerald-50);
+      color: var(--emerald-700);
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      flex: 0 0 auto;
+    }
+
+    .done .dot {
+      border-color: #10b981;
+      background: #10b981;
+    }
+
+    .final {
+      border: 0;
+      background: var(--slate-950);
+      color: #fff;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.22);
+    }
+
+    .final .card-inner { padding: 30px; }
+    .final h2 {
+      margin: 0;
+      font-size: 30px;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .final p {
+      color: #e2e8f0;
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 920px;
+    }
+
+    .final-kicker {
+      color: #7dd3fc;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .dining-tip,
+      .must-grid,
+      .list-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tabs {
+        display: grid;
+        width: 100%;
+      }
+
+      .hero { padding-top: 36px; }
+      .lead { font-size: 16px; }
+      .timeline-card,
+      .attraction-card { grid-template-columns: 42px 1fr; }
+      .container { width: min(100% - 28px, 1120px); }
+      .must-grid > div:last-child { padding-top: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="container">
+        <div class="chips">
+          <span class="chip blue">香港迪士尼</span>
+          <span class="chip purple">2 歲小孩友善</span>
+          <span class="chip green">住樂園酒店</span>
+          <span class="chip amber">提早入園券</span>
+        </div>
+        <h1>2 歲小孩香港迪士尼 <span>1.5 日互動遊園攻略</span></h1>
+        <p class="lead">以「下午入園＋隔天提早入園」為主軸，把熱門幼兒設施、表演、用餐與回飯店休息整合成一份可執行行程。重點是穩定體力，不硬衝、不排滿。</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <div class="section-kicker">📍 Route Strategy</div>
+        <h2 class="section-title">你們這趟的玩法定位</h2>
+        <p class="section-desc">這不是玩滿兩整天，而是「保留體力、分段出擊」。香港迪士尼園區精巧，兩天行程安排可以非常鬆。Day 1 定位在「熟悉環境與煙火」，Day 2 則是「熱門設施攻堅戰」。由於平日人潮相對少，第二天常有種「包場」的感覺，讓孩子能餓了就吃、想重玩就重玩。</p>
+        <div class="grid-3">
+          <div class="card"><div class="card-inner"><div class="icon sky">👶</div><h3>不一開始衝太累</h3><p>Day 1 避開魔雪奇緣熱門設施，先從旋轉木馬、小小世界這類溫和設施開始，再逐步升級到小熊維尼、魔雪奇幻之旅。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🏨</div><h3>住宿與午睡優勢</h3><p>住樂園酒店步行回房不到 10 分鐘，可彈性小睡、換衣服、用餐或休息，再重新入園。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon amber">🎆</div><h3>煙火與離園策略</h3><p>Day 1 晚上看煙火，Day 2 午餐後離園最順。出發前再確認<a href="https://www.accuweather.com/zh/hk/hong-kong/1123655/10-day-weather-forecast/1123655" target="_blank" rel="noreferrer">天氣預報</a>、<a href="https://www.hongkongdisneyland.com/zh-hk/calendars/day/2026-05-27/#/theme-park/" target="_blank" rel="noreferrer">當日開園時間</a>、<a href="https://www.hongkongdisneyland.com/zh-hk/guest-services/baby-care-center/" target="_blank" rel="noreferrer">育嬰室／尿布台</a>位置，並用<a href="https://apps.apple.com/hk/app/%E9%A6%99%E6%B8%AF%E8%BF%AA%E5%A3%AB%E5%B0%BC%E6%A8%82%E5%9C%92/id1077550649" target="_blank" rel="noreferrer">香港迪士尼 APP</a>即時查時間、地點等資訊。</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-kicker">⏱️ Timeline</div>
+        <h2 class="section-title">兩日行程時間軸</h2>
+        <p class="section-desc">點選 Day 1 或 Day 2，可快速切換當天重點。這份時間表刻意保留彈性，不把每分鐘塞滿。</p>
+        <img class="timeline-map" src="https://upd-api.funtime.com.tw/uploads/large__1762a0ee81.png" alt="香港迪士尼樂園地圖" />
+        <div class="tabs" role="tablist" aria-label="行程日期切換">
+          <button class="tab active" type="button" data-tab="day1" role="tab" aria-selected="true">Day 1 下午入園＋煙火</button>
+          <button class="tab" type="button" data-tab="day2" role="tab" aria-selected="false">Day 2 提早入園＋午餐後離園</button>
+        </div>
+
+        <div id="day1" class="timeline" role="tabpanel">
+          <div class="timeline-card"><div class="timeline-icon">👶</div><div><div class="timeline-title-row"><span class="chip blue">14:30–15:30</span><h3>低刺激設施開場</h3></div><div class="mini-tags"><span class="chip">旋轉木馬</span><span class="chip">小小世界</span><span class="chip">小飛象或小熊維尼</span></div><p>目的不是衝數量，而是讓孩子進入樂園節奏。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">🏰</div><div><div class="timeline-title-row"><span class="chip blue">15:30–16:30</span><h3>表演 or 回飯店短休</h3></div><div class="mini-tags"><span class="chip">魔海奇緣凱旋慶典</span><span class="chip">迪士尼好友巡遊派對</span><span class="chip">迪士尼好友Live：城堡派對</span><span class="chip">回樂園酒店休息 30–60 分鐘</span></div><p>優先看票券附贈指定觀賞區的城堡派對，也可依場次安排魔海奇緣凱旋慶典或迪士尼好友巡遊派對。獅子王慶典和迪士尼魔法書房目前暫停開放，先不排入主線；若孩子累了，就回房降刺激。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">📷</div><div><div class="timeline-title-row"><span class="chip blue">16:30–17:30</span><h3>船類設施／角色／拍照</h3></div><div class="mini-tags"><span class="chip">森林河流之旅</span><span class="chip">夢想花園角色見面</span><span class="chip">美國小鎮大街拍照</span></div><p>不要排太刺激或太長的隊，保留體力到晚上。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">🍽️</div><div><div class="timeline-title-row"><span class="chip blue">17:00–18:00</span><h3>提早晚餐</h3></div><div class="mini-tags"><span class="chip">大冒險家餐廳</span><span class="chip">皇室宴會廳</span><span class="chip">大街餐廳</span><span class="chip">或回樂園酒店用餐</span></div><p>不要等到小孩餓了才找餐廳。大冒險家餐廳可以考慮 VIP 煙火觀賞專區方案；或回酒店的翠樂庭餐廳用餐，若事先預訂生日蛋糕，角色可到桌邊慶生。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">🌙</div><div><div class="timeline-title-row"><span class="chip blue">18:00–煙火前</span><h3>低強度等待煙火</h3></div><div class="mini-tags"><span class="chip">逛商店</span><span class="chip">重搭短隊設施</span><span class="chip">找較容易撤退的位置</span></div><p>若孩子怕大聲，不需要站城堡最前面。</p></div></div>
+        </div>
+
+        <div id="day2" class="timeline violet" role="tabpanel" hidden>
+          <div class="timeline-card"><div class="timeline-icon">⏰</div><div><div class="timeline-title-row"><span class="chip purple">9:30 提早入園</span><h3>主攻熱門幼兒設施</h3></div><div class="mini-tags"><span class="chip">魔雪奇幻之旅</span><span class="chip">小熊維尼歷險之旅</span><span class="chip">小飛象旋轉世界</span><span class="chip">旋轉木馬</span></div><p>Early Entry 最適合用在會排隊、但 2 歲也能玩的設施。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">✨</div><div><div class="timeline-title-row"><span class="chip purple">正式開園後–10:30</span><h3>補幻想世界與魔雪區互動</h3></div><div class="mini-tags"><span class="chip">小小世界</span><span class="chip">森林小天地</span><span class="chip">迪士尼好友Live：城堡派對</span><span class="chip">角色見面</span><span class="chip">冰雪宮殿拍照</span></div><p>如果 Day 1 沒看城堡派對，且 Day 2 午餐前剛好有場次，可以用指定觀賞區權益補看；否則多留在魔雪奇緣世界。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">☕</div><div><div class="timeline-title-row"><span class="chip purple">10:30–11:30</span><h3>準備午餐</h3></div><div class="mini-tags"><span class="chip">11:00 左右吃午餐</span><span class="chip">避開 12:00–13:00 尖峰</span><span class="chip">把午餐當收尾</span></div><p>吃完還有時間回飯店整理，不會卡到 early afternoon 離園節奏。</p></div></div>
+          <div class="timeline-card"><div class="timeline-icon">🏨</div><div><div class="timeline-title-row"><span class="chip purple">11:30–13:00</span><h3>彈性收尾</h3></div><div class="mini-tags"><span class="chip">精神好：補小小世界／童話園林／旋轉木馬</span><span class="chip">累了：直接回酒店整理</span><span class="chip">想買紀念品：先列清單快速買</span></div><p>午餐後是 2 歲疲累高峰，不建議再硬排熱門設施。童話園林有可互動的小模型，適合小孩低強度探索。</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-kicker">🎠 Attractions</div>
+        <h2 class="section-title">2 歲優先設施清單</h2>
+        <p class="section-desc">只保留對你們有用的設施排序：最溫和、最值得排、最適合用 Early Entry 的項目。</p>
+        <div class="grid-2">
+          <div class="attraction-card"><div class="icon slate">🎠</div><div><div class="inline-head"><h3>仙履奇緣旋轉木馬</h3><span class="chip green">Day 1 開場佳</span></div><div class="meta">幻想世界｜最穩開場</div><p>最沒有驚嚇感，適合讓 2 歲先理解樂園設施流程。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">✨</div><div><div class="inline-head"><h3>小小世界</h3><span class="chip purple">可重搭</span></div><div class="meta">幻想世界｜2 歲必玩</div><p>溫和遊船、色彩繽紛、音樂固定，幼兒接受度最高。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">⭐</div><div><div class="inline-head"><h3>小熊維尼歷險之旅</h3><span class="chip amber">Early Entry 值得</span></div><div class="meta">幻想世界｜熱門幼兒友善</div><p>室內慢速遊園車，像進入繪本；若 Day 1 排隊長，留到 Day 2 提早入園。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">🪄</div><div><div class="inline-head"><h3>小飛象旋轉世界</h3><span class="chip blue">早上較不曬</span></div><div class="meta">幻想世界｜小孩高接受度</div><p>高度可自行控制，早上或傍晚玩比較舒服。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">🛶</div><div><div class="inline-head"><h3>森林河流之旅</h3><span class="chip green">小孩愛看水</span></div><div class="meta">探險世界｜放鬆型設施</div><p>搭船看水、動物與叢林，適合 Day 1 傍晚或 Day 2 收尾。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">🏡</div><div><div class="inline-head"><h3>童話園林</h3><span class="chip blue">低強度探索</span></div><div class="meta">幻想世界｜互動模型</div><p>有可互動的小模型，適合小孩慢慢看、慢慢摸，也可作為排隊與表演之間的緩衝。</p></div></div>
+          <div class="attraction-card"><div class="icon slate">🧸</div><div><div class="inline-head"><h3>Duffy 好友遊玩屋</h3><span class="chip purple">角色互動</span></div><div class="meta">Duffy 與好友主題｜幼兒友善</div><p>適合喜歡角色、拍照和互動的小孩，可作為 Day 1 或 Day 2 的低刺激彈性安排。</p></div></div>
+        </div>
+        <div class="note-box" id="frozenNote">
+          <button class="note-toggle" type="button" aria-expanded="false" aria-controls="frozenNoteContent">❄️ 魔雪奇幻之旅要不要第一個玩？ <span class="chevron">⌄</span></button>
+          <div class="note-content" id="frozenNoteContent">畫面很美，但有急停倒退和俯衝的橋段。重點是：此設施提供乘客輪換服務。若小孩對設施的接受度不高，建議跳過，或由大人輪流玩就好。</div>
+        </div>
+        <div class="note-box">
+          <button class="note-toggle" type="button" aria-expanded="false">🎢 如果對設施接受度高，可以考慮比較進階的設施 <span class="chevron">⌄</span></button>
+          <div class="note-content">瘋帽客旋轉杯：可玩，但大人要控制不要轉太快。<br>蟻俠與黃蜂女：室內的射擊遊戲，可互相比分。<br>米奇幻想曲：室內看 3D 電影，要考慮怕暗，戴眼鏡看 3D 會不會暈。<br>玩具兵團跳降傘：溫和的垂直升降、距離短、不會可怕，但要考慮會不會怕高。<br>轉轉彈弓狗：溫和旋轉，但要考慮會不會怕旋轉。</div>
+        </div>
+        <div class="note-box">
+          <button class="note-toggle" type="button" aria-expanded="false">🧒 學齡前適用設施（溫和且無身高限制） <span class="chevron">⌄</span></button>
+          <div class="note-content">小小世界、蟻俠與黃蜂女、小飛象、小熊維尼、小鎮大街古董車、旋轉木馬、米奇幻想曲、玩具兵團跳降傘、樂園鐵路火車站、加利布尼市集小遊戲、旋轉杯、轉轉彈弓狗、Duffy 好友遊玩屋。</div>
+        </div>
+        <div class="note-box">
+          <button class="note-toggle" type="button" aria-expanded="false">⏰ 提早入園開放設施 <span class="chevron">⌄</span></button>
+          <div class="note-content">提早一個小時入園，能玩的設施只有五項：魔雪奇緣、雪嶺滑雪橇（身高限制 95cm 以上）、旋轉木馬、小飛象、小熊維尼。</div>
+        </div>
+        <div class="note-box">
+          <button class="note-toggle" type="button" aria-expanded="false">🎉 慶祝徽章 <span class="chevron">⌄</span></button>
+          <div class="note-content">如果是小孩的生日、第一次來、或家庭紀念日，到美國小鎮大街的市政廳（服務中心）可以拿免費慶祝徽章，工作人員看到的話有可能會給特別的驚喜。</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-kicker">🎭 Shows</div>
+        <h2 class="section-title">表演推薦排序</h2>
+        <p class="section-desc">你們時間有限，表演不需要全看。因門票附贈「迪士尼好友Live：城堡派對」指定觀賞專區，這場可優先安排；其他表演再依孩子體力與場次取捨。</p>
+        <div class="grid-4">
+          <div class="card"><div class="card-inner"><div class="icon violet">🏰</div><span class="chip purple">#1</span><h3>迪士尼好友Live：城堡派對</h3><p><strong>最佳安排：</strong>Day 1 下午優先，或 Day 2 午餐前補看</p><p>門票附指定觀賞專區，適合善用票券權益；演出在奇妙夢想城堡前舞台，實際場次以官方 App 當日時間為準。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🌊</div><span class="chip purple">#2</span><h3>魔海奇緣凱旋慶典</h3><p><strong>最佳安排：</strong>Day 1 下午</p><p>戶外開放式劇場，節奏明快，適合搭配探險世界或下午低強度行程。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🎉</div><span class="chip purple">#3</span><h3>迪士尼好友巡遊派對</h3><p><strong>最佳安排：</strong>Day 1 下午或傍晚前</p><p>角色密度高，小孩容易投入；可依 App 當日場次安排，不必為了卡位太早消耗體力。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">❄️</div><span class="chip purple">#4</span><h3>森林小天地</h3><p><strong>最佳安排：</strong>Day 2 搭配魔雪區</p><p>近距離互動式表演，比正式角色見面更容易讓幼兒有參與感。</p></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-kicker">🍽️ Dining</div>
+        <h2 class="section-title">用餐安排：園區餐廳與酒店彈性並用</h2>
+        <p class="section-desc">園區用餐不用硬撐到底。身上先備好麵包、餅乾、水果或孩子熟悉的小零食，避免排隊時餓到崩潰；若園區餐廳人太多，也可以回樂園酒店用餐或休息，再重新入園看煙火。</p>
+        <div class="grid-4">
+          <div class="card"><div class="card-inner"><h3>大冒險家餐廳</h3><p><strong>園區內較舒服的正式用餐</strong></p><p>適合 Day 1 晚餐，若想留在園區等煙火，也可以考慮 VIP 煙火觀賞專區方案。<a href="https://www.hongkongdisneyland.com/restaurant-menu/explorers-club-restaurant.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card"><div class="card-inner"><h3>皇室宴會廳</h3><p><strong>空間大、選擇多</strong></p><p>位於幻想世界，離幼兒設施最近，有白飯、麵等選項，適合不想踩雷、想找穩妥選擇。<a href="https://www.hongkongdisneyland.com/restaurant-menu/royal-banquet-hall.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card"><div class="card-inner"><h3>阿德爾港畔餐廳</h3><p><strong>最貼 Day 2 Frozen 主線</strong></p><p>適合 Day 2 早上主攻魔雪奇緣世界後，直接在附近吃午餐。<a href="https://www.hongkongdisneyland.com/restaurant-menu/golden-crocus-inn.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card"><div class="card-inner"><h3>翠樂庭餐廳</h3><p><strong>迪士尼朋友現身互動</strong></p><p>菜色豐富，適合全家聚餐；若事先跟飯店餐廳櫃台預訂生日蛋糕，翠樂庭的角色會來桌邊慶生。</p></div></div>
+          <div class="card"><div class="card-inner"><h3>大街餐廳</h3><p><strong>靠近小鎮大街，煙火前後動線好</strong></p><p>有兒童菜單，環境比快餐店舒適。<a href="https://www.hongkongdisneyland.com/restaurant-menu/main-street-corner-cafe.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card"><div class="card-inner"><h3>星航餐廳</h3><p><strong>口味大眾化</strong></p><p>供應白飯、漢堡、雞排類，快餐店形式，出菜速度快。</p></div></div>
+          <div class="card"><div class="card-inner"><h3>彗星餐廳</h3><p><strong>飯麵類，小孩易入口</strong></p><p>供應日式壽喜燒飯、烏龍麵、中式炒飯，快餐店形式，出菜速度快。</p></div></div>
+          <div class="card"><div class="card-inner"><h3>樂園酒店晶荷軒</h3><p><strong>中菜粵菜與造型點心</strong></p><p>供應中菜粵菜，有可愛造型點心。</p></div></div>
+          <div class="card"><div class="card-inner"><h3>好萊塢酒店藝彩廚</h3><p><strong>角色自助餐</strong></p><p>有迪士尼朋友現身互動的自助餐。</p></div></div>
+        </div>
+        <div class="dining-tip">
+          <div class="card tip-blue"><div class="card-inner"><h3>Day 1 晚餐建議</h3><p>17:00–18:00 提早吃。若孩子累，直接回樂園酒店吃飯或休息，再重新入園看煙火。</p></div></div>
+          <div class="card tip-violet"><div class="card-inner"><h3>Day 2 午餐建議</h3><p>11:00 左右吃，當作離園前收尾。吃完回飯店整理，避開 2 歲午餐後疲累高峰。</p></div></div>
+        </div>
+        <div class="card" style="margin-top:14px;"><div class="card-inner"><h3>小食推薦</h3><p>很多小吃攤在下午 3 點後會打折，尤其是麵包類。可留意米奇鬆餅（魔雪奇緣世界）、烤肉串攤（探險世界）、特色爆米花（不同位置不同特色）、雞蛋仔（美國小鎮大街）、造型甜甜圈（大街餅店）。</p></div></div>
+      </section>
+
+      <section>
+        <div class="section-kicker">⭐ Must Do</div>
+        <h2 class="section-title">這趟真正的必去清單</h2>
+        <div class="must-grid" style="margin-top:18px;">
+          <div class="card"><div class="card-inner"><h3>必玩</h3><div class="check-item"><span class="check">✓</span>小小世界</div><div class="check-item"><span class="check">✓</span>仙履奇緣旋轉木馬</div><div class="check-item"><span class="check">✓</span>小熊維尼歷險之旅</div><div class="check-item"><span class="check">✓</span>小飛象旋轉世界</div><div class="check-item"><span class="check">✓</span>森林河流之旅</div><div class="check-item"><span class="check">✓</span>魔雪奇幻之旅</div><div class="check-item"><span class="check">✓</span>火車／大街古董車</div><div class="check-item"><span class="check">✓</span>Duffy 好友遊玩屋</div></div></div>
+          <div class="card"><div class="card-inner"><h3>必看／可彈性加入</h3><div class="check-item"><span class="check sky">✓</span>迪士尼好友Live：城堡派對</div><div class="check-item"><span class="check sky">✓</span>魔海奇緣凱旋慶典</div><div class="check-item"><span class="check sky">✓</span>迪士尼好友巡遊派對</div><div class="check-item"><span class="check sky">✓</span>森林小天地</div><div class="check-item"><span class="check sky">✓</span>Day 1 煙火</div><div class="check-item"><span class="check sky">✓</span>角色見面</div><div class="check-item"><span class="check sky">✓</span>Pushy 垃圾桶偶遇</div></div></div>
+          <div class="card"><div class="card-inner"><h3>入園前快速檢查</h3><div class="checklist" id="checklist"><button type="button"><span class="dot"></span>推車</button><button type="button"><span class="dot"></span>水壺</button><button type="button"><span class="dot"></span>小零食／水果</button><button type="button"><span class="dot"></span>換洗衣物</button><button type="button"><span class="dot"></span>行動電源</button><button type="button"><span class="dot"></span>薄外套或防曬帽</button><button type="button"><span class="dot"></span>查 App 表演時間</button><button type="button"><span class="dot"></span>確認城堡派對指定觀賞區使用方式</button><button type="button"><span class="dot"></span>確認 Early Entry 使用規則</button></div></div></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card final"><div class="card-inner"><div class="final-kicker">🪄 Final Recommendation</div><h2>最順玩法一句話</h2><p>Day 1 下午先用旋轉木馬、小小世界、小飛象讓孩子進入狀況，下午優先看門票附贈指定觀賞區的迪士尼好友Live：城堡派對，也可依場次安排魔海奇緣凱旋慶典或迪士尼好友巡遊派對。傍晚提早吃飯，必要時回樂園酒店休息，晚上再回園看煙火。Day 2 9:30 用提早入園券主攻魔雪奇幻之旅、小熊維尼、小飛象，接著補小小世界、森林小天地、城堡派對或角色見面，11 點左右吃午餐，午餐後回飯店整理並 early afternoon 離園。</p></div></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const panels = {
+      day1: document.getElementById("day1"),
+      day2: document.getElementById("day2"),
+    };
+
+    function switchDay(target) {
+      tabs.forEach((item) => {
+        const selected = item.dataset.tab === target;
+        item.classList.toggle("active", selected);
+        item.setAttribute("aria-selected", selected ? "true" : "false");
+      });
+
+      Object.entries(panels).forEach(([key, panel]) => {
+        const selected = key === target;
+        panel.hidden = !selected;
+        panel.style.display = selected ? "grid" : "none";
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => switchDay(tab.dataset.tab));
+    });
+
+    switchDay("day1");
+
+    document.querySelectorAll(".note-box").forEach((noteBox) => {
+      const toggle = noteBox.querySelector(".note-toggle");
+      toggle.addEventListener("click", () => {
+        const open = noteBox.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    });
+
+    document.querySelectorAll("#checklist button").forEach((button) => {
+      button.addEventListener("click", () => button.classList.toggle("done"));
+    });
+  </script>
+</body>
+</html>
