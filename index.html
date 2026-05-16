@@ -278,6 +278,37 @@
       box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
     }
 
+    .filter-tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 18px;
+      background: var(--slate-100);
+      margin: 0 0 18px;
+    }
+
+    .filter-tab {
+      border: 0;
+      border-radius: 14px;
+      padding: 11px 15px;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--slate-700);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .filter-tab:focus {
+      outline: 2px solid #38bdf8;
+      outline-offset: 2px;
+    }
+
+    .filter-tab.active {
+      background: var(--slate-950);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+    }
+
     .timeline { display: grid; gap: 12px; }
 
     .timeline-card,
@@ -470,7 +501,8 @@
         grid-template-columns: 1fr;
       }
 
-      .tabs {
+      .tabs,
+      .filter-tabs {
         display: grid;
         width: 100%;
       }
@@ -560,7 +592,7 @@
         </div>
         <div class="note-box">
           <button class="note-toggle" type="button" aria-expanded="false">🧒 學齡前適用設施（溫和且無身高限制） <span class="chevron">⌄</span></button>
-          <div class="note-content">小小世界、蟻俠與黃蜂女、小熊維尼、小鎮大街古董車、旋轉木馬、樂園鐵路火車站、加利布尼市集小遊戲、Duffy 好友遊玩屋。</div>
+          <div class="note-content">小小世界、蟻俠與黃蜂女、小熊維尼、小鎮大街古董車、森林河流之旅、旋轉木馬、樂園鐵路火車站、加利布尼市集小遊戲、Duffy 好友遊玩屋。</div>
         </div>
         <div class="note-box">
           <button class="note-toggle" type="button" aria-expanded="false">⏰ 提早入園開放設施 <span class="chevron">⌄</span></button>
@@ -577,10 +609,11 @@
         <h2 class="section-title">表演推薦排序</h2>
         <p class="section-desc">你們時間有限，表演不需要全看。因門票附贈「迪士尼好友Live：城堡派對」指定觀賞專區，這場可優先安排；其他表演再依孩子體力與場次取捨。</p>
         <div class="grid-4">
-          <div class="card"><div class="card-inner"><div class="icon violet">🏰</div><span class="chip purple">#1</span><h3>迪士尼好友Live：城堡派對</h3><p><strong>最佳安排：</strong>Day 1 下午優先，或 Day 2 午餐前補看</p><p>門票附指定觀賞專區，適合善用票券權益；演出在奇妙夢想城堡前舞台，實際場次以官方 App 當日時間為準。</p></div></div>
-          <div class="card"><div class="card-inner"><div class="icon violet">🌊</div><span class="chip purple">#2</span><h3>魔海奇緣凱旋慶典</h3><p><strong>最佳安排：</strong>Day 1 下午</p><p>戶外開放式劇場，節奏明快，適合搭配探險世界或下午低強度行程。</p></div></div>
-          <div class="card"><div class="card-inner"><div class="icon violet">🎉</div><span class="chip purple">#3</span><h3>迪士尼好友巡遊派對</h3><p><strong>最佳安排：</strong>Day 1 下午或傍晚前</p><p>角色密度高，小孩容易投入；可依 App 當日場次安排，不必為了卡位太早消耗體力。</p></div></div>
-          <div class="card"><div class="card-inner"><div class="icon violet">❄️</div><span class="chip purple">#4</span><h3>森林小天地</h3><p><strong>最佳安排：</strong>Day 2 搭配魔雪區</p><p>近距離互動式表演，比正式角色見面更容易讓幼兒有參與感。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🏰</div><span class="chip purple">#1</span><h3><a href="https://www.hongkongdisneyland.com/zh-hk/entertainment/disney-friends-live-party-at-the-castle/" target="_blank" rel="noreferrer">迪士尼好友Live：城堡派對</a></h3><p><strong>最佳安排：</strong>Day 1 下午優先，或 Day 2 午餐前補看</p><p>門票附指定觀賞專區，適合善用票券權益；演出在奇妙夢想城堡前舞台，實際場次以官方 App 當日時間為準。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🌊</div><span class="chip purple">#2</span><h3><a href="https://www.hongkongdisneyland.com/zh-hk/entertainment/moana-homecoming-celebration/" target="_blank" rel="noreferrer">魔海奇緣凱旋慶典</a></h3><p><strong>最佳安排：</strong>Day 1 下午</p><p>戶外開放式劇場，節奏明快，適合搭配探險世界或下午低強度行程。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🎉</div><span class="chip purple">#3</span><h3><a href="https://www.hongkongdisneyland.com/zh-hk/entertainment/friendtastic-parade/" target="_blank" rel="noreferrer">迪士尼好友巡遊派對</a></h3><p><strong>最佳安排：</strong>Day 1 下午或傍晚前</p><p>角色密度高，小孩容易投入；可依 App 當日場次安排，不必為了卡位太早消耗體力。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">❄️</div><span class="chip purple">#4</span><h3><a href="https://www.hongkongdisneyland.com/zh-hk/entertainment/playhouse-in-the-woods/" target="_blank" rel="noreferrer">森林小天地</a></h3><p><strong>最佳安排：</strong>Day 2 搭配魔雪區</p><p>近距離互動式表演，比正式角色見面更容易讓幼兒有參與感。</p></div></div>
+          <div class="card"><div class="card-inner"><div class="icon violet">🎆</div><span class="chip purple">#5</span><h3><a href="https://www.hongkongdisneyland.com/zh-hk/entertainment/momentous-party-in-the-night-sky/" target="_blank" rel="noreferrer">迪士尼星夢光影之旅：星空派對</a></h3><p><strong>最佳安排：</strong>Day 1 晚上</p><p>煙火、投影與夜間演出作為 Day 1 收尾；若孩子怕大聲，位置可抓遠一點、方便撤退。</p></div></div>
         </div>
       </section>
 
@@ -588,16 +621,21 @@
         <div class="section-kicker">🍽️ Dining</div>
         <h2 class="section-title">用餐安排：園區餐廳與酒店彈性並用</h2>
         <p class="section-desc">園區用餐不用硬撐到底。身上先備好麵包、餅乾、水果或孩子熟悉的小零食，避免排隊時餓到崩潰；若園區餐廳人太多，也可以回樂園酒店用餐或休息，再重新入園看煙火。</p>
-        <div class="grid-4">
-          <div class="card"><div class="card-inner"><h3>大冒險家餐廳</h3><p><strong>園區內較舒服的正式用餐</strong></p><p>適合 Day 1 晚餐，若想留在園區等煙火，也可以考慮 VIP 煙火觀賞專區方案。<a href="https://www.hongkongdisneyland.com/restaurant-menu/explorers-club-restaurant.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
-          <div class="card"><div class="card-inner"><h3>皇室宴會廳</h3><p><strong>空間大、選擇多</strong></p><p>位於幻想世界，離幼兒設施最近，有白飯、麵等選項，適合不想踩雷、想找穩妥選擇。<a href="https://www.hongkongdisneyland.com/restaurant-menu/royal-banquet-hall.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
-          <div class="card"><div class="card-inner"><h3>阿德爾港畔餐廳</h3><p><strong>最貼 Day 2 Frozen 主線</strong></p><p>適合 Day 2 早上主攻魔雪奇緣世界後，直接在附近吃午餐。<a href="https://www.hongkongdisneyland.com/restaurant-menu/golden-crocus-inn.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
-          <div class="card"><div class="card-inner"><h3>翠樂庭餐廳</h3><p><strong>迪士尼朋友現身互動</strong></p><p>菜色豐富，適合全家聚餐；若事先跟飯店餐廳櫃台預訂生日蛋糕，翠樂庭的角色會來桌邊慶生。</p></div></div>
-          <div class="card"><div class="card-inner"><h3>大街餐廳</h3><p><strong>靠近小鎮大街，煙火前後動線好</strong></p><p>有兒童菜單，環境比快餐店舒適。<a href="https://www.hongkongdisneyland.com/restaurant-menu/main-street-corner-cafe.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
-          <div class="card"><div class="card-inner"><h3>星航餐廳</h3><p><strong>口味大眾化</strong></p><p>供應白飯、漢堡、雞排類，快餐店形式，出菜速度快。</p></div></div>
-          <div class="card"><div class="card-inner"><h3>彗星餐廳</h3><p><strong>飯麵類，小孩易入口</strong></p><p>供應日式壽喜燒飯、烏龍麵、中式炒飯，快餐店形式，出菜速度快。</p></div></div>
-          <div class="card"><div class="card-inner"><h3>樂園酒店晶荷軒</h3><p><strong>中菜粵菜與造型點心</strong></p><p>供應中菜粵菜，有可愛造型點心。<a href="https://www.hongkongdisneyland.com/restaurant-menu/crystal-lotus-restaurant-lunch.pdf" target="_blank" rel="noreferrer">午餐菜單</a> <a href="https://www.hongkongdisneyland.com/restaurant-menu/crystal-lotus-restaurant-dinner.pdf" target="_blank" rel="noreferrer">晚餐菜單</a></p></div></div>
-          <div class="card"><div class="card-inner"><h3>好萊塢酒店藝彩廚</h3><p><strong>角色自助餐</strong></p><p>有迪士尼朋友現身互動的自助餐。</p></div></div>
+        <div class="filter-tabs" role="tablist" aria-label="餐廳分類切換">
+          <button class="filter-tab active" type="button" data-filter="all" aria-selected="true">ALL</button>
+          <button class="filter-tab" type="button" data-filter="park" aria-selected="false">園內餐廳</button>
+          <button class="filter-tab" type="button" data-filter="hotel" aria-selected="false">酒店餐廳</button>
+        </div>
+        <div class="grid-4" id="restaurantGrid">
+          <div class="card" data-category="park"><div class="card-inner"><h3>大冒險家餐廳</h3><p><strong>園區內較舒服的正式用餐</strong></p><p>適合 Day 1 晚餐，若想留在園區等煙火，也可以考慮 VIP 煙火觀賞專區方案。<a href="https://www.hongkongdisneyland.com/restaurant-menu/explorers-club-restaurant.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card" data-category="park"><div class="card-inner"><h3>皇室宴會廳</h3><p><strong>空間大、選擇多</strong></p><p>位於幻想世界，離幼兒設施最近，有白飯、麵等選項，適合不想踩雷、想找穩妥選擇。<a href="https://www.hongkongdisneyland.com/restaurant-menu/royal-banquet-hall.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card" data-category="park"><div class="card-inner"><h3>阿德爾港畔餐廳</h3><p><strong>最貼 Day 2 Frozen 主線</strong></p><p>適合 Day 2 早上主攻魔雪奇緣世界後，直接在附近吃午餐。<a href="https://www.hongkongdisneyland.com/restaurant-menu/golden-crocus-inn.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card" data-category="hotel"><div class="card-inner"><h3>翠樂庭餐廳</h3><p><strong>迪士尼朋友現身互動</strong></p><p>菜色豐富，適合全家聚餐；若事先跟飯店餐廳櫃台預訂生日蛋糕，翠樂庭的角色會來桌邊慶生。</p></div></div>
+          <div class="card" data-category="park"><div class="card-inner"><h3>大街餐廳</h3><p><strong>靠近小鎮大街，煙火前後動線好</strong></p><p>有兒童菜單，環境比快餐店舒適。<a href="https://www.hongkongdisneyland.com/restaurant-menu/main-street-corner-cafe.pdf" target="_blank" rel="noreferrer">菜單</a></p></div></div>
+          <div class="card" data-category="park"><div class="card-inner"><h3>星航餐廳</h3><p><strong>口味大眾化</strong></p><p>供應白飯、漢堡、雞排類，快餐店形式，出菜速度快。</p></div></div>
+          <div class="card" data-category="park"><div class="card-inner"><h3>彗星餐廳</h3><p><strong>飯麵類，小孩易入口</strong></p><p>供應日式壽喜燒飯、烏龍麵、中式炒飯，快餐店形式，出菜速度快。</p></div></div>
+          <div class="card" data-category="hotel"><div class="card-inner"><h3>樂園酒店晶荷軒</h3><p><strong>中菜粵菜與造型點心</strong></p><p>供應中菜粵菜，有可愛造型點心。<a href="https://www.hongkongdisneyland.com/restaurant-menu/crystal-lotus-restaurant-lunch.pdf" target="_blank" rel="noreferrer">午餐菜單</a> <a href="https://www.hongkongdisneyland.com/restaurant-menu/crystal-lotus-restaurant-dinner.pdf" target="_blank" rel="noreferrer">晚餐菜單</a></p></div></div>
+          <div class="card" data-category="hotel"><div class="card-inner"><h3>好萊塢酒店藝彩廚</h3><p><strong>角色自助餐</strong></p><p>有迪士尼朋友現身互動的自助餐。</p></div></div>
         </div>
         <div class="dining-tip">
           <div class="card tip-blue"><div class="card-inner"><h3>Day 1 晚餐建議</h3><p>17:00–18:00 提早吃。若孩子累，直接回樂園酒店吃飯或休息，再重新入園看煙火。</p></div></div>
@@ -654,6 +692,23 @@
       toggle.addEventListener("click", () => {
         const open = noteBox.classList.toggle("open");
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    });
+
+    const filterTabs = document.querySelectorAll(".filter-tab");
+    const restaurantCards = document.querySelectorAll("#restaurantGrid .card");
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.filter;
+        filterTabs.forEach((item) => {
+          const selected = item.dataset.filter === target;
+          item.classList.toggle("active", selected);
+          item.setAttribute("aria-selected", selected ? "true" : "false");
+        });
+        restaurantCards.forEach((card) => {
+          card.hidden = target !== "all" && card.dataset.category !== target;
+        });
       });
     });
 
